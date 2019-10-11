@@ -2,7 +2,7 @@
 
 This is Dan's solution to the Sonatype's interview homework problem.
 
-###Take Home Exercise - Print Numbers
+### Take Home Exercise - Print Numbers
 
 Write some software using the technology of your choice that will transform numbers into English word equivalents.
 
@@ -23,7 +23,7 @@ Follow up question responses
 - What is the range for these numbers?
 --Any number that can be stored in a 32 bit signed int
 
-###Solution description
+### Solution description
 
 The number is split into a binary tree following the rules inferred from the English language examples.
 First the "multipliers" are detected. Differently than the decimal base, the English language uses more of a 1000 base. For example, we don't say "one million hundred thousand three ten thousand four thousand" for 1,134,000, but we say "one million one hundred and four thousand". 
@@ -33,7 +33,7 @@ For every step of the splitting, done recursively, the tree is build on the left
 
 The stack size is not a concern, since it is pushed maximum twice for every digit of the number. The numbers have a maximum 10 digits.
 
-###Implementation
+### Implementation
 
 We do not have a Java API for binary trees, so a simple one was implemented from scratch in the `NumberTreeNode` class.
 
