@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class PrintNumbers {
 	private static final Scanner scanner = new Scanner(System.in);
 	
-	// The translation looks for exceptional cases like Zero or negative numbers, which do not belong in the general 
-	// decomposition algorithm. It is easier to maintain if these exceptions are treated separately in a wrapper.
+	// The translation method looks for exceptional cases like Zero or negative numbers, which do not belong in the general 
+	// decomposition algorithm. It is easier to maintain the more general decomposition if these exceptions are treated separately in a wrapper.
 	public static String translate(int entry) {
 		boolean negative = false;
 		if (entry == 0) {
