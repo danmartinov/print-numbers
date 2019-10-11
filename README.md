@@ -1,13 +1,10 @@
 # print-numbers
 
-This is Dan's solution to the Sonatype's interview homework problem.
-
-### Take Home Exercise - Print Numbers
+### Problem - Print Numbers
 
 Write some software using the technology of your choice that will transform numbers into English word equivalents.
 
 Some examples:
-
 
 
 | Sample input | Sample output |
@@ -18,10 +15,7 @@ Some examples:
 | 5237 | Five thousand two hundred and thirty seven |
 
 
-
-Follow up question responses
-- What is the range for these numbers?
---Any number that can be stored in a 32 bit signed int
+The input number should be a signed integer (32 bits)
 
 ### Solution description
 
@@ -33,7 +27,7 @@ For every step of the splitting, done recursively, the tree is build on the left
 
 The stack size is not a concern, since it is pushed maximum twice for every digit of the number. The numbers have a maximum 10 digits.
 
-### Implementation
+###  	Implementation
 
 We do not have a Java API for binary trees, so a simple one was implemented from scratch in the `NumberTreeNode` class.
 

@@ -1,4 +1,4 @@
-package com.sonatype.interview.printnumbers;
+package io.printnumbers;
 
 /**
  * Class (immutable) holding info on how to translate a number.

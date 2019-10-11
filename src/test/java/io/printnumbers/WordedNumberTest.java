@@ -1,9 +1,11 @@
-package com.sonatype.interview.printnumbers;
+package io.printnumbers;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import io.printnumbers.WordedNumber;
 
 public class WordedNumberTest {
 	private WordedNumber withPrep = null;

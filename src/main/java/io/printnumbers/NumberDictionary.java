@@ -1,4 +1,4 @@
-package com.sonatype.interview.printnumbers;
+package io.printnumbers;
 
 import java.util.Collections;
 import java.util.TreeMap;

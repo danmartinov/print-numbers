@@ -1,8 +1,10 @@
-package com.sonatype.interview.printnumbers;
+package io.printnumbers;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import io.printnumbers.NumberTreeNode;
 
 /**
  * The tree testing can get very complex at low level, so I chose to implement tests 

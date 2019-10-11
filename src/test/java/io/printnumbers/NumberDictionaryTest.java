@@ -1,8 +1,10 @@
-package com.sonatype.interview.printnumbers;
+package io.printnumbers;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import io.printnumbers.NumberDictionary;
 
 public class NumberDictionaryTest {
 

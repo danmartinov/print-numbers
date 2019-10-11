@@ -1,4 +1,4 @@
-package com.sonatype.interview.printnumbers;
+package io.printnumbers;
 
 import java.util.ArrayList;
 import java.util.List;
