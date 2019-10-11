@@ -2,7 +2,7 @@
 
 ### Problem - Print Numbers
 
-Write some software using the technology of your choice that will transform numbers into English word equivalents.
+Java program that will transform numbers into English word equivalents.
 
 Some examples:
 
