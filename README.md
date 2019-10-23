@@ -29,11 +29,11 @@ The stack size is not a concern, since it is pushed maximum twice for every digi
 
 ###  	Implementation
 
-We do not have a Java API for binary trees, so a simple one was implemented from scratch in the `NumberTreeNode` class.
+We do not have a Java API for binary trees, so a simple one was implemented from scratch in the `EnglishNumberNode` class.
 
-The multipliers and units used to split the numbers are held ordered in `NumberDictionary`.
+The multipliers and units used to split the numbers are held ordered in static maps in `EnglishAtom`, and provided through factory methods.
 
-The values with their English name are held in the immutable `WordedNumber`. This class also holds the information about if it can be used with the preposition `and` or not.
+The values with their English name are held in the immutable `EnglishAtom`. This class also holds the information about if it can be used with the preposition `and` or not.
 
-I made the choice of letting the `Zero` and `Minus` cases out of the tree implementation. I considered it would have complicated the implementation un-neccessarily and hurt the maintenance. Instead, I chose to treat them right after input as a special processing.
+I made the choice of letting the `Zero` case out of the tree implementation. It is treated as a special case in the main method.
 
