@@ -47,52 +47,34 @@ public class EnglishNumberNode {
 	 * @return
 	 */
 	private void splitNumber(int number) {
-//		System.out.println("\n1. New number=" + number);
-
 		if (number == -1) {
 			units = EnglishAtom.of(-1);
 			return;
 		}
-		
 		multiplier = EnglishAtom.multiplierOf(number);
-//		System.out.println("2. Matched multiplier=" + multiplier);
 		
 		// no multiplier found means number under hundred
 		// mantissa is going to be the value of the units matched
 		if (null == multiplier) {
-//			System.out.println("3. Null multiplier=" + multiplier);
 			if (number < 0) {
 				left = new EnglishNumberNode(-1);
 			}
 			units = EnglishAtom.matchingUnitOf(number);
-//			System.out.println("4. Matched unit=" + units);
 			mantissa = units.getValue();
-//			System.out.println("5. mantissa=" + mantissa);
-
 			remainder = Math.abs(number) - mantissa;
-//			System.out.println("6. remainder=" + remainder);
 		}
 		else {
-//			System.out.println("7. Non-null multiplier=" + multiplier);
 			mantissa = number / multiplier.getValue();
-//			System.out.println("8. mantissa=" + mantissa);
 			remainder = Math.abs(number % multiplier.getValue());
-//			System.out.println("9. remainder=" + remainder);
 		}
 		
-//		EnglishAtom exactUnits = EnglishAtom.unitOf(mantissa);
 		if (null == units) {
-//			System.out.println("10. Null unit, new left node for mantissa=" + mantissa);
 			left = new EnglishNumberNode(mantissa);
 		}
 		
 		if (remainder != 0) {
-//			System.out.println("14. Reminder non-zero unit=" + units + " mantissa=" + mantissa + " remainder=" + remainder);
 			right = new EnglishNumberNode(remainder);
 		}
-//		else { //noop
-//			System.out.println("15. Reminder zero unit=" + units + " mantissa=" + mantissa + " remainder=" + remainder);
-//		}
 	}
 	
 	public List<EnglishAtom> toList(List<EnglishAtom> list) {

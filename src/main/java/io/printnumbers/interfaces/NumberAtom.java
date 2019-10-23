@@ -2,7 +2,7 @@ package io.printnumbers.interfaces;
 
 /**
  * Interface to be implemented for each language.
- * The class will have to implement the factory methods in some way.
+ * The implementing class will have to implement the factory methods and prevent the use of constructors.
  * Since the set of instances for each language is finite, an immutable map should be preferred.
  * 
  * @author dan
@@ -46,14 +46,6 @@ public interface NumberAtom {
 	 */
 	static NumberAtom multiplierOf(int number) { return null; }
 
-//	/**
-//	 * Factory method returning the largest multiplier atom corresponding to the number, 
-//	 * if it exists, or null otherwise.
-//	 * 
-//	 * @param number
-//	 * @return
-//	 */
-////	static NumberAtom matchingMultiplierOf(int number) { return null; }
 
 	/**
 	 * Factory method returning the unit atom corresponding to the number, 
